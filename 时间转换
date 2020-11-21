@@ -1,0 +1,35 @@
+#include "stdio.h"
+int main()
+{
+    int seconds=0;
+    int h,m,s;
+    scanf("%d",&seconds);
+    if(seconds>=3600)
+    {
+        h=seconds/3600;
+        if((seconds-h*3600)>=60)
+        {
+            m=(seconds-h*3600)/60;
+            s=seconds-h*3600-m*60;
+        }
+    printf("%d %d %d",h,m,s);
+    }
+    else
+    {
+        h=0;
+        if(seconds>=60)
+        {
+            m=seconds/60;
+            s=seconds%60; 
+        }
+        else
+        {
+            m=0;
+            s=seconds;
+        }
+    printf("%d %d %d",h,m,s);
+    }
+    
+    return 0;
+    
+}
