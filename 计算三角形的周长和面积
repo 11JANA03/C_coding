@@ -1,0 +1,16 @@
+#include"stdio.h"
+#include<math.h>
+int main()
+{
+    double p;
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    double cir;
+    double area;
+    cir=a+b+c;
+    p=(double)(cir/2);
+    area=sqrt(p*(p-a)*(p-b)*(p-c));
+    printf("circumference=%.2f area=%.2f\n",cir,area);
+    return 0;
+        
+}
