@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+void inPut(int array[], int number);
+int MAX(int array[],int number);
+
+void inPut(int array[],int number){
+	int i;
+	cout<<"请输入五个数字:";
+	for(i=0;i<number;i++){
+	cin>>array[i];
+	}
+}
+
+int MAX(int array[],int number){
+	int temp=array[0],i,NUM;
+	for(i=1;i<number;i++)
+	{
+		if(temp<array[i])
+		temp=array[i];
+	}
+	return temp;
+}
+
+int main(){
+	int Array[10];
+	inPut(Array,5);
+	int temp=MAX(Array,5);
+	cout<<"五个数中最大的数是:"<<temp;
+}
