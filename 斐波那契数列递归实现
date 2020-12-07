@@ -1,0 +1,17 @@
+#include "stdio.h"
+int fib(int n)
+{
+	if(n<2)
+	return n;
+	else
+	return fib(n-1)+fib(n-2);
+}
+
+int main()
+{
+	int num=0;
+	printf("求第几位的元素：");
+	scanf("%d",&num);
+	printf("第%d位上的元素是%d",num,fib(num));
+	return 0;
+} 
