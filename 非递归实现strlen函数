@@ -1,0 +1,20 @@
+#include "stdio.h" 
+
+int my_strlen(char *n)
+{
+	int count=0;
+	while((*n)!='\0')
+	{
+		count++;
+		n++;
+	}
+	return count;
+}
+
+int main()
+{
+	char n[]="abcd";
+	my_strlen(n);
+	printf("%d",my_strlen(n));
+	 return 0;
+} 
