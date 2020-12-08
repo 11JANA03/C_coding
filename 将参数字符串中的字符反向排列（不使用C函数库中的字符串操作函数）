@@ -1,0 +1,33 @@
+#include "stdio.h" 
+int my_strlen(char *n)
+{
+	int count=0;
+	while((*n)!='\0')
+	{
+		count++;
+		n++;
+	}
+	return count;
+}
+
+void reverse_string(char * string)
+{
+	char temp;
+	int left=0;int right=my_strlen(string)-1;
+	if(left<=right)
+	{
+		temp=string[left];
+		string[left]=string[right];
+		string[right]=temp;
+		left++;
+		right--;
+	}
+	printf("%s",string);
+}
+
+int main()
+{
+	char n[]="abcd";
+	reverse_string(n);
+	return 0;
+} 
