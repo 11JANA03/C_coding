@@ -1,0 +1,15 @@
+#include "stdio.h"
+int PrintSum(int n)
+{
+	if(n>9)
+	return PrintSum(n/10)+n%10;
+	else return n;
+}
+
+int main()
+{
+	int num=0;
+	scanf("%d",&num);
+	printf("%d",PrintSum(num));
+	return 0;
+} 
