@@ -1,0 +1,12 @@
+#include "stdio.h"
+int main()
+{
+    long long y=0,m=0,d=0;
+    scanf("%4d",&y);
+    scanf("%2d",&m);
+    scanf("%2d",&d);
+    printf("year=%d\n",y);
+    printf("month=%.2d\n",m);
+    printf("date=%.2d\n",d);
+    return 0;
+}
