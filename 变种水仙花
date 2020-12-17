@@ -1,0 +1,39 @@
+#include"stdio.h"
+#include "math.h"
+int main()
+{
+	int a = 0, b = 0, c = 0, d = 0, e = 0;
+	int i=0;
+	while(i<=100000)
+	{   
+		int count=0;
+		e = i % 10;//个
+		d = (i / 10) % 10; //十
+		c = (i / 100) % 10;//百
+		b = (i / 1000) % 10;//千
+		a = (i / 10000) % 10;//万
+		
+		if(e!=0)
+		count++;
+		if(d!=0)
+		count++;
+		if(c!=0)
+		count++;
+		if(b!=0)
+		count++;
+		if(a!=0)
+		count++;
+		
+		if ((pow(a, count)+ 
+			pow(b, count)+
+			pow(c, count)+
+			pow(d, count)+
+			pow(e, count))==i )	
+		{
+			printf("%d ", i);
+		}
+		i++;
+	}
+	return 0;
+}
+
