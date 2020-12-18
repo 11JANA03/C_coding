@@ -1,0 +1,15 @@
+int Factorial(int n)
+{
+	if(n==1)
+	return n;
+	else
+	return n*Factorial(n-1);
+}
+
+int main()
+{
+	int n,m;
+	scanf("%d",&n);
+	printf("%d",Factorial(n));
+	 return 0;
+} 
