@@ -1,0 +1,14 @@
+#include "stdio.h"
+int main()
+{
+	int val=1;
+	//低       高
+	//01 00 00 00 小端机 
+	//00 00 00 01 大端机 
+	char ch=(char)val;//(大给小)截断 
+	if(ch)//ch==1 
+	printf("小端机\n");
+	else//ch==0 
+	printf("大端机\n");
+	return 0;
+} 
