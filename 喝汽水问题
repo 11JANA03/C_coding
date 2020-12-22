@@ -1,0 +1,26 @@
+#include "stdio.h"
+
+int NumSoda(int m)
+{
+	int num=20/1,sum=0;//num当前所换汽水瓶数，sum喝的总数
+	sum=num+sum;
+	while(num!=2)
+	/*注意：兑换汽水的最后一步是用五个瓶子换两瓶汽水，
+	没有进入最后一次循环时num=5，
+	运行完15行时，num=2，意味着当前情况下兑换了两瓶汽水，
+	还剩一个瓶子，不满足题意中的两个瓶子换一瓶汽水，
+	所以退出循环。
+	*/
+	{
+		num=num/2;
+		sum=num+sum;
+	}
+	printf("%d ",sum);
+}
+
+int main()
+{
+	int mony=20;
+	NumSoda(mony);
+	return 0;
+} 
