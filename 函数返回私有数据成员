@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+class Date
+{
+	public:
+		Date(int y,int m,int d)
+		{
+	        setDate(y,m,d);
+        }	
+		
+		void  setDate(int y,int m,int d)
+		{
+		    year=y;
+			month=m;
+			day=d;
+		}
+		int &getYear()
+		{
+			return year;
+		}
+		
+		void displayDate()
+		{
+	        cout<<year<<"/"<<month<<"/"<<day<<endl;
+        }
+	private:
+		int year,month,day;
+		
+};
+			
+int main()
+{
+	Date d1(2020,3,31);
+	int & y=d1.getYear();
+	y=2019;
+	d1.displayDate();
+	y=2018;
+	d1.displayDate();
+	
+	return 0;
+}
+
+
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+ 
