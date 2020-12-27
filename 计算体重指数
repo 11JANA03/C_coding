@@ -1,0 +1,10 @@
+#include "stdio.h"
+int main()
+{
+    int w=0,h=0;
+    double a;
+    scanf("%d %d",&w,&h);
+    a=(double)w/(h*h)*10000;
+    printf("%.2f\n",a);
+    return 0;
+}
