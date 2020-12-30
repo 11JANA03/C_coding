@@ -1,0 +1,20 @@
+#include "stdio.h"
+int main()
+{
+     int t=0,sum=0;
+    for(int i=1;i<2020;i++)
+    {
+        t=i;
+        while(t>0)
+        {
+            if(t%10==9)
+            {
+                sum++;
+                break;
+            }
+            t/=10;
+        }
+    }
+    printf("%d",sum); 
+    return 0;
+}
