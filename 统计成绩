@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+    int n;
+    double sum=0,x,max=-1,min=101,avg;
+    scanf("%d",&n);
+    int m=n;
+    while(n--){
+        scanf("%lf",&x);
+        sum+=x;
+        if(x>max) max=x;
+        if(x<min) min=x;
+    }
+    avg=sum/m;
+    printf("%.2f %.2f %.2f\n",max,min,avg);
+}
