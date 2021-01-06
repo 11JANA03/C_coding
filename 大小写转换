@@ -1,0 +1,19 @@
+#include "stdio.h"
+int main()
+{
+    char t;
+    while(scanf("%c",&t)!=EOF)
+    {
+        if((t>='a')&&(t<='z'))
+        {           
+            printf("%c\n",t-32);
+
+        }
+        if((t>='A')&&(t<='Z'))
+        {
+            
+            printf("%c\n",t+32);
+        }
+    }
+    return 0;
+}
